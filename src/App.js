@@ -1,29 +1,25 @@
-import { makeStyles } from '@material-ui/core';
+// import { makeStyles } from '@material-ui/core';
 import './App.css';
 import About from './components/About';
-import MyWork from './components/MyWork';
-import Navbar from './components/Navbar';
-import Skill from './components/Skill';
+import Footer from './components/Footer';
+// import MyWork from './components/MyWork';
 
 function App() {
-const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-    <>
-    <Navbar/>
-    <About/>
-    <MyWork/>
-    <Skill/>
-      <div>
-        <h1>Esto es mi portafolio</h1>
-      </div>
-    </>
+    <div className='{classes.root}'>
+    <About title="About Me" dark={true}/>
+    <Footer/>
+    {/* <MyWork title="My Work" id="work" dark={true}/> */}
+    </div>
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-  }
-}))
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+
+//   }
+// }))
 
 export default App;
