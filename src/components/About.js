@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, Card, CardActions, CardContent, CardMedia, makeStyles, Typography } from '@material-ui/core';
 import TypeWritterEffect from 'react-typewriter-effect';
-import Skill from './Skill';
-import welcome from "./../assets/images/welcome-on-board.jpeg"
+import welcome from "./../assets/images/sea-bridge.webp"
 import CV from "./../assets/utils/Curriculum-vitae-developed.pdf"
+import Tecnologies from './Tecnologies';
 
 
 const About = ({title, dark, id}) =>{
@@ -11,37 +11,39 @@ const About = ({title, dark, id}) =>{
 
     return (
         <div className={`${classes.section} ${dark && classes.sectiondark}`}>
-            <Skill title="My Coding" id="Skill" dark={false}/>
             <div className={classes.sectioncontent}>
                 <Card className={classes.card}>
-                    <CardMedia image={welcome} className={classes.cardmedia} title="picture">
-                        <CardContent className={classes.cardcontent}>
-                            <TypeWritterEffect 
-                            text= 'Hola, soy David Del pozo "Roma"'
-                            textStyle={{fontSize: "2rem", fontWeight: "700px", color: '#33FFFF'}}
-                            startDelay={100}
-                            cursorColor="black"
-                            typeSpeed={100}
-                            />
-                            <TypeWritterEffect 
-                            text= 'Bienvenido a mi porfolio"'
-                            textStyle={{fontSize: "1.3rem", fontWeight: "500px"}}
-                            startDelay={3000}
-                            cursorColor="black"
-                            typeSpeed={100}
-                            />
-                            <Typography variant="h6" color="textSecondary">
-                                Texto de perfil.
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button variant="contained" className={classes.pdfbutton}>
-                                <a href={CV} download>Download CV</a>  
-                            </Button>
-                        </CardActions>
-                    </CardMedia>
+                    <CardMedia image={welcome} className={classes.cardmedia} title="picture"/>
+                    <CardContent className={classes.cardcontent}>
+                        <TypeWritterEffect 
+                        text= 'Hola, soy David Del pozo "Roma"'
+                        textStyle={{fontSize: "2rem", fontWeight: "700px", color: '#33FFFF'}}
+                        startDelay={100}
+                        cursorColor="black"
+                        typeSpeed={100}
+                        />
+                        <TypeWritterEffect 
+                        text= 'Bienvenido a mi porfolio"'
+                        textStyle={{fontSize: "1.3rem", fontWeight: "500px"}}
+                        startDelay={3000}
+                        cursorColor="black"
+                        typeSpeed={100}
+                        />
+                        <Typography variant="h6" color="textSecondary">
+                            Texto de perfil.
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button variant="contained" className={classes.pdfbutton}>
+                            <a href={CV} download>Download CV</a>  
+                        </Button>
+                        <Button variant="contained" className={classes.pdfbutton}>
+                            <a href={CV} download>My Work</a>  
+                        </Button>
+                    </CardActions>  
                 </Card>
             </div>
+            <Tecnologies/>
         </div>
     )
 
@@ -49,7 +51,7 @@ const About = ({title, dark, id}) =>{
 
 const useStyles = makeStyles((theme) => ({
     section: {
-        minHeight: "90vh",
+        minHeight: "85vh",
     },
     sectiondark:{
         background: "#333",
@@ -66,18 +68,19 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         height: "70vh",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
-        textAlign: "center",   
-        position: "relative",
-        marginTop: theme.spacing(6), //mobile quitar
+        textAlign: "center",
+        marginTop: theme.spacing(5), //mobile quitar
     },
     cardmedia:{
         borderRadius: 16,
-        width: "95%",
-        height: "95%",
-        margin: theme.spacing(2)
+        width: "90%",
+        height: 300,
+        margin: "0 auto",
     },
     cardcontent:{
+        margin: "0 auto",
         "& h6": {
             marginTop: theme.spacing(6),
             [theme.breakpoints.down("sm")]:{
@@ -86,15 +89,13 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     pdfbutton:{
-        position: "absolute",
-        bottom: "2rem",
-        right: "4rem",
-        // [theme.breakpoints.down("sm")]:{
-        //     bottom: 10,
-        //     rigth: "0.5rem",
-        // },
+        [theme.breakpoints.down("xs")]:{
+            margin: "0 auto",
+        },
         backgroundColor: '#33FFFF',
-        padding: theme.spacing(2),
+        marginLeft: theme.spacing(10),
+        marginTop: theme.spacing(10),
+        padding: theme.spacing(1),
         "&:hover": {
             backgroundColor: "#fff"
         },
