@@ -4,7 +4,7 @@ const Footer = () =>{
 
     return (
         <>
-            <h1>Esto Es el Footer</h1>
+            <h1>Contact me</h1>
         </>
     )
 

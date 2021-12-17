@@ -16,10 +16,6 @@ const Skill = ({title, dark, id}) =>{
 
 const useStyles = makeStyles((theme) => ({
     section: {
-        
-        background: "#c8e6c9",
-        border: 1,
-        borderColor: 'primary.main',
         borderRadius: 16,
 
     },
