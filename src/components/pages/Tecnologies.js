@@ -4,7 +4,6 @@ import { IoLogoAngular,
         IoLogoCss3, 
         IoLogoHtml5, 
         IoLogoJavascript,
-
     } from 'react-icons/io';
 import { FaNode, FaPhp, FaReact } from 'react-icons/fa';
 import { SiMongodb, SiMysql } from 'react-icons/si';
@@ -53,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "row",
         justifyContent: "center",
         textAlign: "center",
+        flexWrap: "wrap",
         margin: theme.spacing(3),
     },
     containerlogo:{

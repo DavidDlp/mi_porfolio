@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button, Card, CardActions, CardContent, CardMedia, makeStyles, Typography } from '@material-ui/core';
 import TypeWritterEffect from 'react-typewriter-effect';
-import welcome from "./../assets/images/sea-bridge.webp"
-import CV from "./../assets/utils/Curriculum-vitae-developed.pdf"
 import Tecnologies from './Tecnologies';
+import welcome from "./../../assets/images/sea-bridge.webp"
+import CV from "./../../assets/utils/Curriculum-vitae-developed.pdf"
 
 
-const About = ({title, dark, id}) =>{
+const AboutMe = ({dark}) =>{
     const classes = useStyles();
 
     return (
@@ -38,7 +38,7 @@ const About = ({title, dark, id}) =>{
                             <a href={CV} download>Download CV</a>  
                         </Button>
                         <Button variant="contained" className={classes.pdfbutton}>
-                            <a href={CV} download>My Work</a>  
+                            <a href={CV} >My Work</a>  
                         </Button>
                     </CardActions>  
                 </Card>
@@ -51,7 +51,7 @@ const About = ({title, dark, id}) =>{
 
 const useStyles = makeStyles((theme) => ({
     section: {
-        minHeight: "85vh",
+        minHeight: "90vh",
     },
     sectiondark:{
         background: "#333",
@@ -111,4 +111,4 @@ const useStyles = makeStyles((theme) => ({
     },
   }))
 
-export default About
+export default AboutMe
