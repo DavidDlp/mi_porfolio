@@ -1,25 +1,26 @@
-// import { makeStyles } from '@material-ui/core';
+import React from 'react';
 import './App.css';
-import About from './components/About';
-import Footer from './components/Footer';
-// import MyWork from './components/MyWork';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from './components/core/Footer';
+import Home from './components/core/Home';
+import MyWork from './components/pages/MyWork';
 
 function App() {
-  // const classes = useStyles();
 
   return (
-    <div className='{classes.root}'>
-    <About title="About Me" dark={true}/>
-    <Footer/>
-    {/* <MyWork title="My Work" id="work" dark={true}/> */}
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element = {<Home/>} />
+            <Route path="mywork" element= {<MyWork title="My Work" dark={true}/>} />
+          </Route>
+        </Routes>
+        <Footer title="Contact Me" dark={false}/>
+      </BrowserRouter>
     </div>
   );
 }
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-
-//   }
-// }))
 
 export default App;
