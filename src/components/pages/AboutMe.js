@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Button, Card, CardActions, CardContent, CardMedia, makeStyles, Typography } from '@material-ui/core';
 import TypeWritterEffect from 'react-typewriter-effect';
 import Tecnologies from './Tecnologies';
@@ -38,7 +39,7 @@ const AboutMe = ({dark}) =>{
                             <a href={CV} download>Download CV</a>  
                         </Button>
                         <Button variant="contained" className={classes.pdfbutton}>
-                            <a href={CV} >My Work</a>  
+                            <Link to="/mywork">My Work</Link> 
                         </Button>
                     </CardActions>  
                 </Card>
