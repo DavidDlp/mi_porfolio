@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Button, Card, CardActions, CardContent, CardMedia, makeStyles, Typography } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, CardMedia, Container, makeStyles, Typography } from '@material-ui/core';
 import TypeWritterEffect from 'react-typewriter-effect';
 import Tecnologies from './Tecnologies';
 import welcome from "./../../assets/images/sea-bridge.webp"
@@ -11,7 +11,7 @@ const AboutMe = ({dark}) =>{
     const classes = useStyles();
 
     return (
-        <div className={`${classes.section} ${dark && classes.sectiondark}`}>
+        <Container className={`${classes.section} ${dark && classes.sectiondark}`}>
             <div className={classes.sectioncontent}>
                 <Card className={classes.card}>
                     <CardMedia image={welcome} className={classes.cardmedia} title="picture"/>
@@ -45,7 +45,7 @@ const AboutMe = ({dark}) =>{
                 </Card>
             </div>
             <Tecnologies/>
-        </div>
+        </Container>
     )
 
 };
