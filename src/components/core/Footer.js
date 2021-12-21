@@ -3,7 +3,7 @@ import { makeStyles, Typography } from '@material-ui/core';
 import ContactMe from '../pages/ContactMe';
 
 
-const Footer = (title, dark) =>{
+const Footer = (dark) =>{
     const classes = useStyles();
 
     return (
@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center"
     },
     sectiondark:{
-        background: "#333",
-        color: "#fff",
+        background: theme.palette.background.main,
+        color: theme.palette.third.main,
     },
 }))
 

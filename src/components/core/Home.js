@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutMe from '../pages/AboutMe';
 
-const Home = (title, dark) =>{
+const Home = (dark) =>{
 
     return (
         <div>
