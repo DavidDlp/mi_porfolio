@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import workData from '../../workData';
-import { Card, CardContent, CardMedia, Container, Grid, makeStyles, Typography } from '@material-ui/core';
+import {Card, CardContent, CardMedia, Container, Grid, makeStyles, Typography } from '@material-ui/core';
 import { FcHome } from 'react-icons/fc';
 
 const MyWork = ({title, dark}) =>{
@@ -13,7 +13,7 @@ const MyWork = ({title, dark}) =>{
             <Link to="/"><FcHome className={classes.logo}/></Link>
             </div>
             <div className={classes.sectioncontent}>
-                <Typography variant="h2" color="textPrimary">
+                <Typography variant="h2" color="secondary">
                     {title}
                 </Typography>
                 <Grid container className={classes.containercards}>
@@ -22,10 +22,10 @@ const MyWork = ({title, dark}) =>{
                             <Grid item key={index} xs={12} sm={6} md={4}>
                                 <Card className={classes.card}>
                                     <CardMedia className={classes.picture} image={image} titulo="picture"/>
-                                    <CardContent>
-                                        <Link to={link} color="primary" target="_blank" rel="noopener noreferrer">
+                                    <CardContent className={classes.content}>
+                                        <a href={link} target="_blank" rel="noopener noreferrer">
                                             {title}
-                                        </Link>
+                                        </a>
                                     </CardContent>
                                 </Card>
                             </Grid>
@@ -43,8 +43,8 @@ const useStyles = makeStyles((theme) => ({
         minHeight: "90vh",
     },
     sectiondark:{
-        background: "#333",
-        color: "#fff",
+        background: theme.palette.background.main,
+        color: theme.palette.third.main,
     },
     logo:{
         fontSize: "2.5rem",
@@ -56,18 +56,26 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
     },
     containercards:{
-        marginTop: theme.spacing(4),
-        
+        margin: "0 auto",
     },
     card:{
         maxWidth: 345,
-        minHeight:275,
-        margin: theme.spacing(3),
+        minHeight:295,
+        margin: theme.spacing(4)
     },
     picture:{
-        // height: 0,
-        // paddingTop: "56.25%",  //16:9
+        height: 0,
+        paddingTop: "56.25%",  //16:9
     },
+    content:{
+        "& a": {
+            textDecoration: "none",
+            color: theme.palette.primary.main,
+        },
+        "& a:hover":{
+            color: theme.palette.secondary.main,
+        },
+    }
     
 }))
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { Link, makeStyles } from '@material-ui/core';
 import { FaGithub, FaLinkedin, FaMailBulk } from 'react-icons/fa';
 
 const ContactMe = () =>{
@@ -9,9 +9,15 @@ const ContactMe = () =>{
         <>
             <div className={classes.container}>
                 <div className={classes.containerbox}>
-                    <FaGithub className={classes.logo}/>
-                    <FaLinkedin className={classes.logo}/>
-                    <FaMailBulk className={classes.logo}/>
+                    <Link href='https://github.com/DavidDlp' target="_blank">
+                        <FaGithub className={classes.logo}/>
+                    </Link>
+                    <Link href='https://www.linkedin.com/in/david-dlp' target="_blank">
+                        <FaLinkedin className={classes.logo}/>
+                    </Link>
+                    <Link href='mailto:dlpdavid17@gmail.com' target="_blank">
+                        <FaMailBulk className={classes.logo}/>
+                    </Link>
                 </div>
             </div>
             

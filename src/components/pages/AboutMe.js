@@ -17,21 +17,31 @@ const AboutMe = ({dark}) =>{
                     <CardMedia image={welcome} className={classes.cardmedia} title="picture"/>
                     <CardContent className={classes.cardcontent}>
                         <TypeWritterEffect 
-                        text= 'Hola, soy David Del pozo "Roma"'
-                        textStyle={{fontSize: "2rem", fontWeight: "700px", color: '#33FFFF'}}
+                        text= 'Hola, soy David del Pozo "Roma"'
+                        textStyle={{
+                            fontSize: "2rem", 
+                            fontWeight: "700px", 
+                            textAlign: "center",
+                            color: "#246EB9"}}
                         startDelay={100}
                         cursorColor="black"
                         typeSpeed={100}
                         />
                         <TypeWritterEffect 
-                        text= 'Bienvenido a mi porfolio"'
-                        textStyle={{fontSize: "1.3rem", fontWeight: "500px"}}
+                        text= 'Bienvenido a mi porfolio'
+                        textStyle={{
+                            fontSize: "1.3rem", 
+                            fontWeight: "500px",
+                            textAlign: "center"}}
                         startDelay={3000}
                         cursorColor="black"
                         typeSpeed={100}
                         />
                         <Typography variant="h6" color="textSecondary">
-                            Texto de perfil.
+                            <p><q>"Si puedes diseñar una cosa, 
+                            entonces puedes diseñarlo todo; 
+                            si lo haces bien, perdurará para siempre".</q></p>
+                            <span>Massimo Vignelli</span>
                         </Typography>
                     </CardContent>
                     <CardActions>
@@ -55,8 +65,8 @@ const useStyles = makeStyles((theme) => ({
         minHeight: "90vh",
     },
     sectiondark:{
-        background: "#333",
-        color: "#fff",
+        background: theme.palette.background.main,
+        color: theme.palette.third.main,
     },
     sectioncontent:{
         maxWidth: "90vw",
@@ -93,20 +103,20 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("xs")]:{
             margin: "0 auto",
         },
-        backgroundColor: '#33FFFF',
+        backgroundColor: theme.palette.primary.main,
         marginLeft: theme.spacing(10),
         marginTop: theme.spacing(10),
         padding: theme.spacing(1),
         "&:hover": {
-            backgroundColor: "#fff"
+            backgroundColor: theme.palette.third.main,
         },
         "& a": {
-            color: "#fff",
+            color: theme.palette.third.main,
             textDecoration: "none",
             fontWeight: 900,
         },
         "& a:hover":{
-            color: "#33FFFF"
+            color: theme.palette.primary.main,
         }, 
         
     },
