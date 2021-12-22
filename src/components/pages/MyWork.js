@@ -27,6 +27,11 @@ const MyWork = ({title, dark}) =>{
                                             {title}
                                         </a>
                                     </CardContent>
+                                    <CardContent>
+                                        <Typography variant="body2" color="textSecondary">
+                                            {description}
+                                        </Typography>
+                                    </CardContent>
                                 </Card>
                             </Grid>
                         ))
@@ -60,12 +65,16 @@ const useStyles = makeStyles((theme) => ({
     },
     card:{
         maxWidth: 345,
-        minHeight:295,
+        minHeight:300,
         margin: theme.spacing(4)
     },
     picture:{
+        //tamaño imagen 330 x 140
         height: 0,
-        paddingTop: "56.25%",  //16:9
+        paddingTop: "40%",
+        border: '1px solid grey',
+        borderRadius: 16,
+        margin: theme.spacing(1) 
     },
     content:{
         "& a": {
