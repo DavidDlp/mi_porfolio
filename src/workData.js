@@ -8,14 +8,14 @@ const workData = [
         title: "Lucky",
         subtitle: "LuckyApi",
         image: lucky ,
-        description: "Proyecto grupal realizado con React & NodeJs, aplicación de adopción de mascotas. ",
-        link: "https://github.com/DavidDlp/Project-lucky",
+        description: "Proyecto grupal realizado con React & NodeJs, aplicación de adopción de mascotas, versión mobile. ",
+        link: "https://project-lucky.netlify.app/",
     },
     {
         title: "Todo List",
         image: todolist,
         description: "Proyecto Todo list realizado con JavaScripts.",
-        link: "https://github.com/DavidDlp/js-todolist",
+        link: "https://daviddlp.github.io/js-todolist/",
     },
     {
         title: "Rick&Morty",

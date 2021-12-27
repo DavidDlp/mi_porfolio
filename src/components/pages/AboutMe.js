@@ -17,7 +17,7 @@ const AboutMe = ({dark}) =>{
                     <CardMedia image={welcome} className={classes.cardmedia} title="picture"/>
                     <CardContent className={classes.cardcontent}>
                         <TypeWritterEffect 
-                        text= 'Hola, soy David del Pozo "Roma"'
+                        text= 'Me llamo David del Pozo "Roma"'
                         textStyle={{
                             fontSize: "2rem", 
                             fontWeight: "700px", 
@@ -28,7 +28,7 @@ const AboutMe = ({dark}) =>{
                         typeSpeed={100}
                         />
                         <TypeWritterEffect 
-                        text= 'Bienvenido a mi porfolio'
+                        text= 'Soy "Junior" FullStack developer'
                         textStyle={{
                             fontSize: "1.3rem", 
                             fontWeight: "500px",

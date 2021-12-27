@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     },
     card:{
         maxWidth: 345,
-        minHeight:300,
+        minHeight:310,
         margin: theme.spacing(4)
     },
     picture:{
