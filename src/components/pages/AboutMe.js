@@ -38,9 +38,9 @@ const AboutMe = ({dark}) =>{
                         typeSpeed={100}
                         />
                         <Typography variant="h6" color="textSecondary">
-                            <p><q>"Si puedes diseñar una cosa, 
+                            <p><q>Si puedes diseñar una cosa, 
                             entonces puedes diseñarlo todo; 
-                            si lo haces bien, perdurará para siempre".</q></p>
+                            si lo haces bien, perdurará para siempre</q></p>
                             <span>Massimo Vignelli</span>
                         </Typography>
                     </CardContent>
