@@ -1,6 +1,7 @@
-import rickmorty from "./assets/images/rick_y_morty.jpg"
-import todolist from "./assets/images/todolist.jpg"
-import lucky from "./assets/images/lucky.jpg"
+import rickmorty from "./assets/images/rick_y_morty.jpg";
+import todolist from "./assets/images/todolist.jpg";
+import lucky from "./assets/images/lucky.jpg";
+import pokemon from "./assets/images/pokemon.jpg"
 
 
 const workData = [
@@ -16,6 +17,12 @@ const workData = [
         image: todolist,
         description: "Proyecto Todo list realizado con JavaScripts.",
         link: "https://daviddlp.github.io/js-todolist/",
+    },
+    {
+        title: "Pokedex",
+        image: pokemon,
+        description: "Proyecto sobre pokemon, uso del DOM y el fetch, realizado con JavaScripts.",
+        link: "https://daviddlp.github.io/Pokemon-js/",
     },
     {
         title: "Rick&Morty",
