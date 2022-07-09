@@ -3,6 +3,7 @@ import todolist from "./assets/images/todolist.jpg";
 import lucky from "./assets/images/lucky.jpg";
 import pokemon from "./assets/images/pokemon.jpg";
 import diving from "./assets/images/buceo.jpg";
+import calculadora from "./assets/images/calculadora.jpg";
 
 const workData = [
   {
@@ -45,6 +46,13 @@ const workData = [
     description:
       "Proyecto sobre pokemon, uso del DOM y el fetch, realizado con JavaScripts.",
     link: "https://daviddlp.github.io/Pokemon-js/",
+  },
+  {
+    title: "Calculadora",
+    image: calculadora,
+    description:
+      "Proyecto para practicar programación orientada a objetos, creando una calculadora",
+    link: "https://daviddlp.github.io/calculadorajs/",
   },
 ];
 
